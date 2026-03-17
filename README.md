@@ -23,41 +23,41 @@ Vue.js es un framework de JavaScript que sirve para crear interfaces web dinámi
 
 Las variables reactivas utilizadas fueron:
 
-- `titulo`: guarda el nombre principal del sistema.
-- `subtitulo`: muestra una breve descripción de la aplicación.
-- `nombre`: almacena el nombre del estudiante.
-- `materia`: guarda la materia para la cual se solicita asesoría.
-- `modalidad`: almacena si la asesoría será presencial, virtual o híbrida.
-- `fecha`: guarda la fecha solicitada.
-- `descripcion`: almacena el detalle del problema académico.
-- `filtroMateria`: sirve para filtrar las solicitudes por nombre de materia.
-- `errores`: almacena los mensajes de validación cuando un dato está incorrecto.
-- `mensajeExito`: muestra un aviso cuando la solicitud se registra correctamente.
-- `solicitudes`: guarda todas las solicitudes registradas en el sistema.
+- titulo: guarda el nombre principal del sistema.
+- subtitulo: muestra una breve descripción de la aplicación.
+- nombre: almacena el nombre del estudiante.
+- materia: guarda la materia para la cual se solicita asesoría.
+- modalidad: almacena si la asesoría será presencial, virtual o híbrida.
+- fecha: guarda la fecha solicitada.
+- descripcion: almacena el detalle del problema académico.
+- filtroMateria: sirve para filtrar las solicitudes por nombre de materia.
+- errores: almacena los mensajes de validación cuando un dato está incorrecto.
+- mensajeExito: muestra un aviso cuando la solicitud se registra correctamente.
+- solicitudes: guarda todas las solicitudes registradas en el sistema.
 
 ### 3. Explique la diferencia entre las directivas utilizadas en su proyecto: v-bind y v-model.
 
-La directiva `v-bind` se utiliza para enlazar atributos HTML con datos de Vue de forma dinámica. Por ejemplo, se usó para desactivar el botón cuando faltan datos y para cambiar clases CSS según el estado.
+La directiva v-bind se utiliza para enlazar atributos HTML con datos de Vue de forma dinámica. Por ejemplo, se usó para desactivar el botón cuando faltan datos y para cambiar clases CSS según el estado.
 
-La directiva `v-model` se utiliza para crear un enlace bidireccional entre el input y la variable reactiva. Es decir, cuando el usuario escribe algo, la variable se actualiza automáticamente, y si la variable cambia, también cambia el valor mostrado en el campo.
+La directiva v-model se utiliza para crear un enlace bidireccional entre el input y la variable reactiva. Es decir, cuando el usuario escribe algo, la variable se actualiza automáticamente, y si la variable cambia, también cambia el valor mostrado en el campo.
 
 ### 4. Mencione al menos un ejemplo de evento utilizado dentro de su aplicación.
 
-Un evento utilizado fue `@submit.prevent="registrarSolicitud"`, que sirve para capturar el envío del formulario y registrar la solicitud sin recargar la página.
+Un evento utilizado fue @submit.prevent="registrarSolicitud", lo utilizamos para capturar el envío del formulario y registrar la solicitud sin recargar la página.
 
-También se utilizó `@click="cambiarEstado(solicitud.id)"` para cambiar el estado de cada solicitud.
+También se utilizó @click="cambiarEstado(solicitud.id)" para cambiar el estado de cada solicitud.
 
 ### 5. Explique para qué utilizó la directiva v-for dentro de su aplicación.
 
-La directiva `v-for` se utilizó para recorrer y mostrar de forma dinámica la lista de solicitudes registradas. También se utilizó para mostrar los mensajes de error cuando una validación falla.
+La directiva v-for se utilizó para recorrer y mostrar de forma dinámica la lista de solicitudes registradas. También se utilizó para mostrar los mensajes de error cuando una validación falla.
 
 ### 6. Describa en qué situación utilizó v-if y qué problema resuelve dentro de su interfaz.
 
-La directiva `v-if` se utilizó para mostrar u ocultar elementos dependiendo de una condición. Por ejemplo, se usó para mostrar los errores de validación solo cuando existen, mostrar el mensaje de éxito cuando se registra una solicitud y mostrar un mensaje cuando no hay resultados en la lista filtrada. Esto mejora la interfaz porque evita mostrar información innecesaria.
+La directiva v-if se utilizó para mostrar u ocultar elementos dependiendo de una condición. Por ejemplo, se usó para mostrar los errores de validación solo cuando existen, mostrar el mensaje de éxito cuando se registra una solicitud y mostrar un mensaje cuando no hay resultados en la lista filtrada. Esto mejora la interfaz porque evita mostrar información innecesaria.
 
 ### 7. Explique cómo se realiza la validación de datos en su aplicación y por qué es importante validar la información ingresada por el usuario.
 
-La validación se realiza dentro del método `validarFormulario()`. En este método se revisa que los campos obligatorios no estén vacíos, que el nombre tenga un mínimo de caracteres, que la fecha no sea anterior al día actual y que la descripción tenga suficiente información.
+La validación se realiza dentro del método validarFormulario() . Este método revisa que los campos obligatorios no estén vacíos, que el nombre tenga un mínimo de caracteres, que la fecha no sea anterior al día actual y que la descripción tenga suficiente información.
 
 Validar los datos es importante porque evita registros incompletos o incorrectos, mejora la calidad de la información y ayuda a que el sistema funcione de forma más confiable.
 
